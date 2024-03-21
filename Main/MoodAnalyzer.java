@@ -1,18 +1,22 @@
-package Mood_Analyser;
+package Mood_Analyser.Main;
 
 public class MoodAnalyzer {
 	String message;
 	public MoodAnalyzer(String message) {
 		this.message=message;
 	}
+	public MoodAnalyzer() {
+	}
 	public String analyseMood() {
+		try {
 		if(message.toLowerCase().contains("sad")) {
 			return "Sad";
 		}
-		else if(message.toLowerCase().contains("happy")) {
+		else {
 			return "Happy";
 		}
-		else {
+		}
+		catch(Exception e) {
 			return "Happy";
 		}
 	}
